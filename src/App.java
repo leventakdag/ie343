@@ -20,6 +20,7 @@ public class App {
             Point p1 = new Point (i, points_coordinates[i][0], points_coordinates[i][1], 2*Math.random()+1);
             points[i] = p1;
         }
+        System.out.println(facs[1].getId());
 
         double[][] distanceMatrix = operator.distanceMatrix(facs, points);
         ArrayList<Facility> openedFacilities = new ArrayList<>();
