@@ -21,6 +21,9 @@ public class App {
             points[i] = p1;
         }
 
+        System.out.println("deneme");
+
+
         double[][] distanceMatrix = operator.distanceMatrix(facs, points);
         ArrayList<Facility> openedFacilities = new ArrayList<>();
         ArrayList<Point> unassignedPoints = new ArrayList<>();
