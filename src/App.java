@@ -20,7 +20,6 @@ public class App {
             Point p1 = new Point (i, points_coordinates[i][0], points_coordinates[i][1], 2*Math.random()+1);
             points[i] = p1;
         }
-        
 
 
         double[][] distanceMatrix = operator.distanceMatrix(facs, points);
