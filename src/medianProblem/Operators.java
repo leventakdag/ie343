@@ -1,5 +1,7 @@
 package medianProblem;
 
+import java.util.ArrayList;
+
 public class Operators {
     public double[][] createDistanceMatrix(int rowLength, int columnLength){
         double[][] result = new double[rowLength][columnLength];
@@ -48,18 +50,21 @@ public class Operators {
         }
         return distMat;
     }
-    public int[][] findMinIndex (double[][] distMat){
-        int[][] result = new int[1][2];
-        double min = distMat[0][0];
+    public double[][] findMinIndex (double[][] distMat, ArrayList<Integer> facilitiesToCheckID){
+        double[][] result = new double[1][3];
+        double min = 10000; //Big M
         for (int i=0;i<distMat.length;i++){
-            for (int j=0;j<distMat[0].length;i++){
-                if (distMat[i][j] < min){
+        	if(facilitiesToCheckID.contains(i))
+        		
+            for (int j=0;j<distMat[0].length;j++){
+                if (distMat[i][j] < min && distMat[i][j]!=-1){
                     min = distMat[i][j];
                     result[0][0] = i;
                     result [0][1] = j;
                 }
             }
         }
+        result[0][2]= min;
         return result;
     }
 }

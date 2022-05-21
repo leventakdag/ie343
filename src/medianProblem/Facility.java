@@ -34,4 +34,8 @@ public class Facility{
     public void setSupply(double supply) {
         this.supply = supply;
     }
+    public void spendSupply(double demand) {
+        this.supply -= demand;
+    }
+    
 }
